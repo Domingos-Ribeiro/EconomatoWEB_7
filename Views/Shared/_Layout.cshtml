@@ -20,7 +20,26 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
+                    <li>
+                    <a href="#">Funcionalidades
+                        <span class="caret"></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Tipo de Artigos", "TipoDeArtigos", "Registo")</li>
+                        </ul>
+                    </li>
+                    <li>
+                    <a href="#">Relatórios
+                        <span class="caret"></a>
+                    </li>
+                    <li>
+                    <a href="#">Gráficos
+                        <span class="caret"></a>
+                    </li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Registo de Utilizadores<span class="caret"></a></li>
                     <li>@Html.ActionLink("Sobre", "Sobre", "Home")</li>
                     <li>@Html.ActionLink("Contactos", "Contactos", "Home")</li>
                 </ul>

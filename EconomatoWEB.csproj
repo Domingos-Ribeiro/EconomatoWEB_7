@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -120,10 +126,29 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ArtigoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DAL\EconomatoWEBContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109082025059_teste2.cs" />
+    <Compile Include="Migrations\202109082025059_teste2.designer.cs">
+      <DependentUpon>202109082025059_teste2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109082034018_teste3.cs" />
+    <Compile Include="Migrations\202109082034018_teste3.designer.cs">
+      <DependentUpon>202109082034018_teste3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109082035433_teste4.cs" />
+    <Compile Include="Migrations\202109082035433_teste4.designer.cs">
+      <DependentUpon>202109082035433_teste4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Artigo.cs" />
+    <Compile Include="Models\Entidade.cs" />
+    <Compile Include="Models\Movimento.cs" />
+    <Compile Include="Models\TipoDeArtigo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -162,10 +187,14 @@
     <Content Include="Views\Home\Sobre.cshtml" />
     <Content Include="Views\Home\Contactos.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Artigoes\Create.cshtml" />
+    <Content Include="Views\Artigoes\Delete.cshtml" />
+    <Content Include="Views\Artigoes\Details.cshtml" />
+    <Content Include="Views\Artigoes\Edit.cshtml" />
+    <Content Include="Views\Artigoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -179,6 +208,17 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202109082025059_teste2.resx">
+      <DependentUpon>202109082025059_teste2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109082034018_teste3.resx">
+      <DependentUpon>202109082034018_teste3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109082035433_teste4.resx">
+      <DependentUpon>202109082035433_teste4.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
