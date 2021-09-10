@@ -21,27 +21,32 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
-                    <li>
-                    <a href="#">Funcionalidades
-                        <span class="caret"></a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Tipo de Artigos", "TipoDeArtigos", "Registo")</li>
-                        </ul>
-                    </li>
-                    <li>
-                    <a href="#">Relatórios
-                        <span class="caret"></a>
-                    </li>
-                    <li>
-                    <a href="#">Gráficos
-                        <span class="caret"></a>
-                    </li>
+
+                    <li>@Html.ActionLink("Entradas", "TipoDeArtigos", "Artigoes/Index")</li>
+
+                    <li>@Html.ActionLink("Saídas", "TipoDeArtigos", "Registo") </li>
+
+                    <li>@Html.ActionLink("Listagens", "TipoDeArtigos", "Registo")</li>
+
+                    <li>@Html.ActionLink("Ver Artigos", "TipoDeArtigos", "Registo")</li>
+
+                    <li>@Html.ActionLink("Ver Tipo de Artigos", "TipoDeArtigos", "TipoDeArtigoes/Index")</li>
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Registo de Utilizadores<span class="caret"></a></li>
-                    <li>@Html.ActionLink("Sobre", "Sobre", "Home")</li>
-                    <li>@Html.ActionLink("Contactos", "Contactos", "Home")</li>
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Informações
+                            <span class="caret">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Sobre", "Sobre", "Home")</li>
+                            <li>@Html.ActionLink("Contactos", "Contactos", "Home")</li>
+                        </ul>
+                    
+
+                    </li>
+
                 </ul>
             </div>
         </div>
