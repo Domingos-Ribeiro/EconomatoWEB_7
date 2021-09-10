@@ -1,0 +1,38 @@
+﻿@model IEnumerable<EconomatoWEB.Models.Entidade>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Fornecedores</h2>
+<br />
+<br />
+<br />
+
+<p>
+    @Html.ActionLink("Criar um Novo Fornecedor", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Designacao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Designacao)
+        </td>
+        <td>
+           
+
+            @Html.ActionLink("Edit", "Edit", new { id = item.IdEntidade }) |
+            @Html.ActionLink("Details", "Details", new { id = item.IdEntidade }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.IdEntidade })
+        </td>
+    </tr>
+}
+
+</table>

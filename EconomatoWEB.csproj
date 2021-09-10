@@ -127,6 +127,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ArtigoesController.cs" />
+    <Compile Include="Controllers\EntidadesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TipoDeArtigoesController.cs" />
     <Compile Include="DAL\EconomatoWEBContext.cs" />
@@ -198,6 +199,11 @@
     <Content Include="Views\TipoDeArtigoes\Details.cshtml" />
     <Content Include="Views\TipoDeArtigoes\Edit.cshtml" />
     <Content Include="Views\TipoDeArtigoes\Index.cshtml" />
+    <Content Include="Views\Entidades\Create.cshtml" />
+    <Content Include="Views\Entidades\Delete.cshtml" />
+    <Content Include="Views\Entidades\Details.cshtml" />
+    <Content Include="Views\Entidades\Edit.cshtml" />
+    <Content Include="Views\Entidades\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
