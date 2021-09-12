@@ -4,10 +4,16 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<br />
+<h4>INFO</h4>
+<h5>Este foi o caminho que seguiu para chegar a esta página: <b>Operações Regulares - Fornecedores - DETALHES</b></h5>
+
+<br />
+<br />
+<br />
 
 <div>
-    <h4>Entidade</h4>
+    
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -21,6 +27,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.IdEntidade }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("EDITAR", "Edit", new { id = Model.IdEntidade }) -
+    @Html.ActionLink("VOLTAR", "Index")
 </p>

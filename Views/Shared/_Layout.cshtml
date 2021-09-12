@@ -28,9 +28,30 @@
 
                     <li>@Html.ActionLink("Listagens", "TipoDeArtigos", "Registo")</li>
 
-                    <li>@Html.ActionLink("Artigos", "TipoDeArtigos", "Registo")</li>
+                    
 
-                    <li>@Html.ActionLink("Tipo de Artigos", "TipoDeArtigos", "TipoDeArtigoes/Index")</li>
+                    
+
+
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Operações Regulares
+                            <span class="caret">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Artigos", "TipoDeArtigos", "Artigoes/Index")</li>
+                            <li>@Html.ActionLink("Tipo de Artigos", "TipoDeArtigos", "TipoDeArtigoes/Index")</li>
+                            <li>@Html.ActionLink("Fornecedores", "TipoDeArtigos", "Entidades/Index")</li>
+                        </ul>
+
+                    </li>
+
+
+
+
+
+
+
 
                     <li>@Html.ActionLink("Fornecedores", "TipoDeArtigos", "Entidades/Index")</li>
 
@@ -45,7 +66,6 @@
                             <li>@Html.ActionLink("Sobre", "Sobre", "Home")</li>
                             <li>@Html.ActionLink("Contactos", "Contactos", "Home")</li>
                         </ul>
-                    
 
                     </li>
 

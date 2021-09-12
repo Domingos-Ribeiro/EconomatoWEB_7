@@ -1,0 +1,24 @@
+﻿
+@model IEnumerable<EconomatoWEB.Models.Artigo>
+
+<h2>Filtrar os Artigos por Nome</h2>
+
+<br />
+<br />
+@*Formulário*@
+
+@using (@Html.BeginForm())
+{
+    @Html.TextBox("Filtro")
+
+    <input type="submit" value="FILTRAR"/>
+}
+
+<br />
+<br />
+
+@foreach (var item in Model)
+{
+    @item.Nome
+    <br />
+}
