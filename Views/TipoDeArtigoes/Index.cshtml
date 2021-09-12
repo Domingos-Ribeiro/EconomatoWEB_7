@@ -4,7 +4,13 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Tipo de Artigos</h2>
+<br />
+<br />
+<h4>INFO</h4>
+<h5>Este foi o caminho que seguiu para chegar a esta página: <b>Operações Regulares - Tipo de Artigos</b></h5>
+<br />
+<br />
 
 <p>
     @Html.ActionLink("Criar um Novo tipo de Artigo", "Create")
@@ -17,17 +23,18 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.IdTipoDeArtigos }) |
-            @Html.ActionLink("Detalhes", "Details", new { id=item.IdTipoDeArtigos }) |
-            @Html.ActionLink("Apagar", "Delete", new { id=item.IdTipoDeArtigos })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.IdTipoDeArtigos }) |
+                @Html.ActionLink("Detalhes", "Details", new { id = item.IdTipoDeArtigos }) |
+                @Html.ActionLink("Apagar", "Delete", new { id = item.IdTipoDeArtigos })
+            </td>
+        </tr>
+    }
 
 </table>

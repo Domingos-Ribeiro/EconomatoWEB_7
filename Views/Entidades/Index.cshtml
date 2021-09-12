@@ -7,6 +7,9 @@
 <h2>Fornecedores</h2>
 <br />
 <br />
+<h4>INFO</h4>
+<h5>Este foi o caminho que seguiu para chegar a esta página: <b>Operações Regulares - Fornecedores</b></h5>
+<br />
 <br />
 
 <p>
@@ -20,19 +23,20 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Designacao)
-        </td>
-        <td>
-           
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Designacao)
+            </td>
+            <td>
 
-            @Html.ActionLink("Editar", "Edit", new { id = item.IdEntidade }) |
-            @Html.ActionLink("Detalhes", "Details", new { id = item.IdEntidade }) |
-            @Html.ActionLink("Eliminar", "Delete", new { id = item.IdEntidade })
-        </td>
-    </tr>
-}
+
+                @Html.ActionLink("Editar", "Edit", new { id = item.IdEntidade }) |
+                @Html.ActionLink("Detalhes", "Details", new { id = item.IdEntidade }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.IdEntidade })
+            </td>
+        </tr>
+    }
 
 </table>

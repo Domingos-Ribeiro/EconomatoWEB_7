@@ -3,11 +3,16 @@
 @{
     ViewBag.Title = "Details";
 }
+<h2>Operações na Base de Dados</h2>
+<br />
+<h4>INFO</h4>
+<h5>Este foi o caminho que seguiu para chegar a esta página: <b>Operações Regulares - Tipo de Artigos - DETALHES</b></h5>
 
-<h2>Details</h2>
 
+<br />
+<br />
 <div>
-    <h4>TipoDeArtigo</h4>
+    <h4>Tipo De Artigos</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -21,6 +26,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.IdTipoDeArtigos }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("EDITAR", "Edit", new { id = Model.IdTipoDeArtigos }) |
+    @Html.ActionLink("VOLTAR", "Index")
 </p>

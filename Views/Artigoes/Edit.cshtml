@@ -4,13 +4,20 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2>Operações na Base de Dados</h2>
+<br />
+<h4>INFO</h4>
+<h5>Este foi o caminho que seguiu para chegar a esta página: <b>Operações Regulares - Artigos - EDITAR</b></h5>
+
+
+<br />
+<br />
 
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Artigo</h4>
         <hr />
@@ -59,14 +66,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="GUARDAR ALTERAÇÃO" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("VOLTAR", "Index")
 </div>
 
 @section Scripts {

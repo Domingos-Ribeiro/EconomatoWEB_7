@@ -4,10 +4,17 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Artigos</h2>
+<br />
+<br />
+<h4>INFO</h4>
+<h5>Este foi o caminho que seguiu para chegar a esta página: <b>Operações Regulares - ARTIGOS</b></h5>
 
+<br />
+<br />
+<br />
 <p>
-    @Html.ActionLink("Criar Novos Artigos", "Create")
+    @Html.ActionLink("Criar um Novo Artigo", "Create")
 </p>
 <table class="table">
     <tr>
@@ -15,8 +22,8 @@
             @Html.DisplayNameFor(model => model.TipoDeArtigo.Nome)
         </th>
         @*<th>
-            @Html.DisplayNameFor(model => model.IdEntidade)
-        </th>*@
+                @Html.DisplayNameFor(model => model.IdEntidade)
+            </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Nome)
         </th>
@@ -29,29 +36,30 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TipoDeArtigo.Nome)
-        </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.IdEntidade)
-        </td>*@
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Preco)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StockMinimo)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.IdArtigo }) |
-            @Html.ActionLink("Detalhes", "Details", new { id=item.IdArtigo }) |
-            @Html.ActionLink("Apagar", "Delete", new { id=item.IdArtigo })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoDeArtigo.Nome)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.IdEntidade)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Preco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StockMinimo)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.IdArtigo }) |
+                @Html.ActionLink("Detalhes", "Details", new { id = item.IdArtigo }) |
+                @Html.ActionLink("Apagar", "Delete", new { id = item.IdArtigo })
+            </td>
+        </tr>
+    }
 
 </table>

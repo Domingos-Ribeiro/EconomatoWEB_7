@@ -3,12 +3,17 @@
 @{
     ViewBag.Title = "Delete";
 }
+<h2>Operações na Base de Dados</h2>
+<br />
+<h4>INFO</h4>
+<h5>Este foi o caminho que seguiu para chegar a esta página: <b>Operações Regulares - Artigos - ELIMINAR</b></h5>
+<hr />
+<br />
 
-<h2>Delete</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Tem mesmo Certeza que deseja Eliminar este Artigo?</h3>
 <div>
-    <h4>Artigo</h4>
+    
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -53,12 +58,13 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="ELIMINAR ARTIGO" class="btn btn-default" /> -
+            @Html.ActionLink("VOLTAR", "Index")
         </div>
     }
 </div>

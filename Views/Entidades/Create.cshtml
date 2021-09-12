@@ -3,9 +3,10 @@
 @{
     ViewBag.Title = "Create";
 }
+<h2>Operações na Base de Dados</h2>
 <br />
-<h3>INFO</h3>
-<h5>Este foi o caminho que seguiu para chegar a esta página: <b>Operações Regulares - Fornecedor - Criar um Novo Fornecedor</b></h5>
+<h4>INFO</h4>
+<h5>Este foi o caminho que seguiu para chegar a esta página: <b>Operações Regulares - Fornecedores - Criar um Novo Fornecedor</b></h5>
 
 
 @using (Html.BeginForm()) 
@@ -19,6 +20,7 @@
     <div class="form-horizontal">
         <h4><b>Inserir</b> um <b>Novo Fornecedor</b> na Base de Dados</h4>
         <hr />
+        
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.Designacao, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -30,7 +32,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Enviar para a Base de Dados" class="btn btn-default" />
+                <input type="submit" value="Guardar na Base de Dados" class="btn btn-default" />
             </div>
         </div>
     </div>

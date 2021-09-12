@@ -3,23 +3,25 @@
 @{
     ViewBag.Title = "Create";
 }
+<h2>Operações na Base de Dados</h2>
+<br />
+<h4>INFO</h4>
+<h5>Este foi o caminho que seguiu para chegar a esta página: <b>Operações Regulares - Artigos - CRIAR UM NOVO ARTIGO</b></h5>
 
-<h2>Create</h2>
 
-
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-        <h4>Artigo</h4>
+        <h4>Criar um novo Artigo</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.IdEntidade, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.IdEntidade, new { htmlAttributes = new { @class = "form-control" } })
-                
+
                 @Html.ValidationMessageFor(model => model.IdEntidade, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -41,7 +43,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.IdTipoDeArtigos, "IdTipoDeArtigos", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.IdTipoDeArtigos, "IdTipoDeArtigos ", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("IdTipoDeArtigos", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.IdTipoDeArtigos, "", new { @class = "text-danger" })
@@ -58,14 +60,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Guardar na Base de Dados" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("VOLTAR", "Index")
 </div>
 
 @section Scripts {
