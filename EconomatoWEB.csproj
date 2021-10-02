@@ -128,6 +128,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ArtigoesController.cs" />
     <Compile Include="Controllers\ArtigosNomesController.cs" />
+    <Compile Include="Controllers\DropDown1Controller.cs" />
     <Compile Include="Controllers\EntidadesController.cs" />
     <Compile Include="Controllers\FiltroNomeArtigosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -208,6 +209,7 @@
     <Content Include="Views\Entidades\Index.cshtml" />
     <Content Include="Views\ArtigosNomes\Index.cshtml" />
     <Content Include="Views\FiltroNomeArtigos\Index.cshtml" />
+    <Content Include="Views\DropDown1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

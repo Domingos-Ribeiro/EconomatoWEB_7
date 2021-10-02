@@ -11,6 +11,7 @@ namespace EconomatoWEB.Models
         [Key()]
         public int IdTipoDeArtigos { get; set; }
 
+        [Display(Name = "Família do Artigo")]
         public string Nome { get; set; }
 
         public virtual ICollection<Artigo> Artigos { get; set; }
